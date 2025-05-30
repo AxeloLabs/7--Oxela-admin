@@ -42,13 +42,16 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
         <DropdownMenuContent align='end'>
           <DropdownMenuLabel>Actions</DropdownMenuLabel>
 
+          {/* TODO: si ca plante, c parce data.id est un number, on l a mis en number car j ai penser le couplage avec le DATA-TABLE */}
+          {/* sinon, si ca plante, c parce qu il faut un string */}
           <DropdownMenuItem
-            onClick={() => router.push(`/dashboard/product/${data.id}`)}
+            onClick={() => router.push(`/admin/product/${data.id}`)}
           >
             <IconEdit className='mr-2 h-4 w-4' /> Update
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => setOpen(true)}>
-            <IconTrash className='mr-2 h-4 w-4' /> Delete
+            <IconTrash className='mr-2 h-4 w-4 text-red-600' />
+            <span className='text-red-600'>Delete</span>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

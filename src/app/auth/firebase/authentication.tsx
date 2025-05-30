@@ -11,7 +11,7 @@ import { auth } from '@/lib/firebase';
 import Button from '@/components/ui-firebase/button';
 import Input from '@/components/ui-firebase/input';
 import { FirebaseError } from 'firebase/app'; // mock
-import { upsertCustomer } from '@firebasegen/default-connector';
+// import { upsertCustomer } from '@oxela/default-connector';
 import { dc } from '@/lib/firebase/data-connect';
 import { setCookie } from 'cookies-next';
 import { getAuthErrorMessage } from '@/lib/firebase/getAuthErrorMessages';
@@ -46,14 +46,15 @@ export default function Authentication() {
     try {
       const { user } = await signInWithEmailAndPassword(auth, email, password);
       setCookie('customerId', user.uid);
-      // DBAX
-      upsertCustomer(dc, {
-        firstName: user.displayName?.split(' ')[0] ?? '',
-        lastName: user.displayName?.split(' ')[1] ?? '',
-        email: user.email ?? '',
-        phone: '',
-        acceptsMarketing: false
-      });
+      // why it is doing an upsert here ?
+      // DBAX TODO: uncomment
+      // upsertCustomer(dc, {
+      //   firstName: user.displayName?.split(' ')[0] ?? '',
+      //   lastName: user.displayName?.split(' ')[1] ?? '',
+      //   email: user.email ?? '',
+      //   phone: '',
+      //   acceptsMarketing: false
+      // });
       // todo
       // if (cartTotalQuantity > 0) {
       //   router.push('/cart');
@@ -83,14 +84,14 @@ export default function Authentication() {
       await updateProfile(user, {
         displayName: `${firstName} ${lastName}`
       });
-      // DBAX
-      await upsertCustomer(dc, {
-        firstName,
-        lastName,
-        email,
-        phone: '',
-        acceptsMarketing: false
-      });
+      // DBAX TODO: uncomment
+      // await upsertCustomer(dc, {
+      //   firstName,
+      //   lastName,
+      //   email,
+      //   phone: '',
+      //   acceptsMarketing: false
+      // });
       // todo
       // if (cartTotalQuantity > 0) {
       //   router.push('/cart');

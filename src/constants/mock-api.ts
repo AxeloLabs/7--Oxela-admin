@@ -10,6 +10,7 @@ export const delay = (ms: number) =>
 
 // Define the shape of Product data
 export type Product = {
+  entityId?: string; // ✅ optionnel et typé string (UUID)
   photo_url: string;
   name: string;
   description: string;
@@ -128,7 +129,7 @@ export const fakeProducts = {
   },
 
   // Get a specific product by its ID
-  async getProductById(id: number) {
+  async getProductByIdOxela(id: number) {
     await delay(1000); // Simulate a delay
 
     // Find the product by its ID

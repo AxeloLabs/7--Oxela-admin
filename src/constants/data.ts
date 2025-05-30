@@ -14,23 +14,15 @@ export type Product = {
 //Info: The following data is used for the sidebar navigation and Cmd K bar.
 export const navItems: NavItem[] = [
   {
-    title: 'Dashboard',
-    url: '/dashboard/overview',
-    icon: 'dashboard',
+    title: 'Tableau de Bord',
+    url: '/admin/overview',
+    icon: 'admin',
     isActive: false,
     shortcut: ['d', 'd'],
-    items: [] // Empty array as there are no child items for Dashboard
+    items: [] // Empty array as there are no child items for Admin
   },
   {
-    title: 'Product',
-    url: '/dashboard/product',
-    icon: 'product',
-    shortcut: ['p', 'p'],
-    isActive: false,
-    items: [] // No child items
-  },
-  {
-    title: 'Account',
+    title: 'Compte',
     url: '#', // Placeholder as there is no direct link for the parent
     icon: 'billing',
     isActive: true,
@@ -38,26 +30,48 @@ export const navItems: NavItem[] = [
     items: [
       {
         title: 'Profile',
-        url: '/dashboard/profile',
+        url: '/admin/profile',
         icon: 'userPen',
         shortcut: ['m', 'm']
       },
       {
-        title: 'Login',
-        shortcut: ['l', 'l'],
-        url: '/',
-        icon: 'login'
+        title: 'Moyen de Paiement',
+        url: '/admin/payment-mode',
+        icon: 'check',
+        shortcut: ['m', 'm']
       }
+      // {
+      //   title: 'Se connecter',
+      //   shortcut: ['l', 'l'],
+      //   url: '/',
+      //   icon: 'login'
+      // }
     ]
   },
   {
-    title: 'Kanban',
-    url: '/dashboard/kanban',
-    icon: 'kanban',
-    shortcut: ['k', 'k'],
+    title: 'Produits',
+    url: '/admin/product',
+    icon: 'product',
+    shortcut: ['p', 'p'],
+    isActive: false,
+    items: [] // No child items
+  },
+  {
+    title: 'Logiciel',
+    url: '/admin/software',
+    icon: 'laptop',
+    shortcut: ['l', 'l'],
     isActive: false,
     items: [] // No child items
   }
+  // {
+  //   title: 'Kanban',
+  //   url: '/admin/kanban',
+  //   icon: 'kanban',
+  //   shortcut: ['k', 'k'],
+  //   isActive: false,
+  //   items: [] // No child items
+  // }
 ];
 
 export interface SaleUser {

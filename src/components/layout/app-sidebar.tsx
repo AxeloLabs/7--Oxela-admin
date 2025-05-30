@@ -52,15 +52,15 @@ import { auth } from '@/lib/firebase';
 import { signOut } from 'firebase/auth';
 
 export const company = {
-  name: 'Acme Inc',
+  name: 'Web Agency',
   logo: IconPhotoUp,
   plan: 'Enterprise'
 };
 
 const tenants = [
-  { id: '1', name: 'Acme Inc' },
-  { id: '2', name: 'Beta Corp' },
-  { id: '3', name: 'Gamma Ltd' }
+  { id: '1', name: 'Oxela Admin' },
+  { id: '2', name: 'Revenir sur le site' }
+  // { id: '3', name: 'Gamma Ltd' }
 ];
 
 export default function AppSidebar() {
@@ -100,9 +100,10 @@ export default function AppSidebar() {
           onTenantSwitch={handleSwitchTenant}
         />
       </SidebarHeader>
+
       <SidebarContent className='overflow-x-hidden'>
         <SidebarGroup>
-          <SidebarGroupLabel>Overview</SidebarGroupLabel>
+          <SidebarGroupLabel>E-commerce</SidebarGroupLabel>
           <SidebarMenu>
             {navItems.map((item) => {
               const Icon = item.icon ? Icons[item.icon] : Icons.logo;
@@ -160,6 +161,7 @@ export default function AppSidebar() {
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
+
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
@@ -199,8 +201,8 @@ export default function AppSidebar() {
                 <DropdownMenuSeparator />
 
                 <DropdownMenuGroup>
-                  <DropdownMenuItem
-                    onClick={() => router.push('/dashboard/profile')}
+                  {/* <DropdownMenuItem
+                    onClick={() => router.push('/admin/profile')}
                   >
                     <IconUserCircle className='mr-2 h-4 w-4' />
                     Profile
@@ -208,7 +210,7 @@ export default function AppSidebar() {
                   <DropdownMenuItem>
                     <IconCreditCard className='mr-2 h-4 w-4' />
                     Billing
-                  </DropdownMenuItem>
+                  </DropdownMenuItem> */}
                   <DropdownMenuItem>
                     <IconBell className='mr-2 h-4 w-4' />
                     Notifications

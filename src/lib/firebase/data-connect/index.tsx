@@ -1,4 +1,4 @@
-import { connectorConfig } from '@firebasegen/default-connector';
+import { connectorConfig } from '@oxela/default-connector';
 import { initializeApp, getApps } from 'firebase/app';
 import {
   getDataConnect,

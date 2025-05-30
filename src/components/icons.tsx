@@ -36,7 +36,7 @@ import {
 export type Icon = React.ComponentType<IconProps>;
 
 export const Icons = {
-  dashboard: IconLayoutDashboard,
+  admin: IconLayoutDashboard,
   logo: IconCommand,
   login: IconLogin,
   close: IconX,

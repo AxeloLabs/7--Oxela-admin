@@ -1,0 +1,38 @@
+# This is a file for you to write an un-named mutation.
+# Only one un-named mutation is allowed per file.
+mutation (
+  #
+  $url: String!
+  $height: Int!
+  $width: Int!
+  $featured: Boolean!
+  $altText: String!
+  $displayPosition: Int!
+  #
+  $title: String!
+  $handle: String!
+  $availableForSale: Boolean!
+  $description: String!
+  $productType: String!
+) @auth(level: PUBLIC) {
+  featuredImageId: productImage_insert(
+    data: {
+      altText: $altText
+      displayPosition: $displayPosition
+      featured: $featured
+      height: $height
+      url: $url
+      width: $width
+    }
+  )
+  product: product_insert(
+    data: {
+      featuredImageId: featuredImageId
+      availableForSale: $availableForSale
+      description: $description
+      handle: $handle
+      productType: $productType
+      title: $title
+    }
+  )
+}

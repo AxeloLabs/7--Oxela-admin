@@ -29,13 +29,15 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
-    "src/instrumentation-client.ts--No",
-    "src/instrumentation.ts--No",
-    "src/middleware.ts-NO",
-    "src/middleware.ts--No",
-    "src/app/auth/firebase/page.tsx--MAYBE",
-    "src/app/page.tsx--CLERK"
+    ".next/types/**/*.ts"
+    // "src/instrumentation-client.ts--No",
+    // "src/instrumentation.ts--No",
+    // "src/middleware.ts-NO",
+    // "src/middleware.ts--No",
+    // "src/app/auth/firebase/page.tsx--MAYBE",
+    // "src/app/page.tsx--CLERK",
+    // "src/app/error.tsx--MAYBE"
+    // , "src/features/products/components/product-listing.tsx--TODEL"
   ],
   "exclude": ["node_modules"],
   "moduleResolution": ["node_modules", ".next", "node"]

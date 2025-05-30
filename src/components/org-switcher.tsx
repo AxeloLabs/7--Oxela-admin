@@ -14,6 +14,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem
 } from '@/components/ui/sidebar';
+import FirebaseIcon from './icon/firebase';
 
 interface Tenant {
   id: string;
@@ -52,11 +53,13 @@ export function OrgSwitcher({
               size='lg'
               className='data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground'
             >
-              <div className='bg-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg'>
-                <GalleryVerticalEnd className='size-4' />
+              {/* <div className='bg-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg'> */}
+              <div className='text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg'>
+                {/* <GalleryVerticalEnd className='size-4' /> */}
+                <FirebaseIcon className='size-8 shrink-0' />
               </div>
               <div className='flex flex-col gap-0.5 leading-none'>
-                <span className='font-semibold'>Next Starter</span>
+                {/* <span className='font-semibold'>Oxela Admin</span> */}
                 <span className=''>{selectedTenant.name}</span>
               </div>
               <ChevronsUpDown className='ml-auto' />

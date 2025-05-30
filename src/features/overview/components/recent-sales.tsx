@@ -49,10 +49,10 @@ export function RecentSales() {
   return (
     <Card className='h-full'>
       <CardHeader>
-        <CardTitle>Recent Sales</CardTitle>
-        <CardDescription>You made 265 sales this month.</CardDescription>
+        <CardTitle>Support</CardTitle>
+        <CardDescription>Utiliser notre chatbot</CardDescription>
       </CardHeader>
-      <CardContent>
+      {/* <CardContent>
         <div className='space-y-8'>
           {salesData.map((sale, index) => (
             <div key={index} className='flex items-center'>
@@ -68,7 +68,7 @@ export function RecentSales() {
             </div>
           ))}
         </div>
-      </CardContent>
+      </CardContent> */}
     </Card>
   );
 }

@@ -1,0 +1,674 @@
+I0604 18:24:30.712803   38070 load.go:37] Reloading schema and connectors...
+I0604 18:24:30.802422   38070 control.go:73] [/emulator/p6--oxela--firebase-root-service 1874] UpdateResources(): done
+Schema: sources: schema/schema.gql [1167B] 
+Connector "default": sources: connector/mutations.gql [768B] connector/queries.gql [1014B] 
+I0604 18:24:30.836012   38070 codegen.go:82] [connector "default" javascriptSdk] Generating sources into "/Users/ax/1-IT--mac2025/VS/0--proj/7--Oxela-admin/dcgen/js/default-connector"
+I0604 18:24:30.851558   38070 collector.go:107] schema extensions wrote into "/Users/ax/1-IT--mac2025/VS/0--proj/7--Oxela-admin/dataconnect/.dataconnect/schema"
+Generated sources: main/mutation.gql [10225B] prelude.gql [71531B] main/implicit.gql [794B] main/input.gql [25390B] main/relation.gql [14458B] main/query.gql [3800B] 
+I0604 18:24:30.852518   38070 collector.go:107] connector "default" javascriptSdk wrote into "/Users/ax/1-IT--mac2025/VS/0--proj/7--Oxela-admin/dcgen/js/default-connector"
+Generated sources: react/esm/package.json [17B] react/index.cjs.js [2526B] esm/package.json [17B] package.json [854B] react/index.d.ts [3051B] react/package.json [462B] react/esm/index.esm.js [2368B] react/README.md [35729B] index.d.ts [6499B] esm/index.esm.js [2646B] index.cjs.js [3112B] README.md [30330B] 
+I0604 18:24:30.855532   38070 installsdk.go:49] Package @oxela/default-connector is already installed. Skipping installation
+I0604 18:24:30.855611   38070 load.go:115] Finished reloading
+I0604 18:24:30.858186   38070 dev.go:95] Listening on address (HTTP + gRPC): 127.0.0.1:9399
+I0604 18:24:30.859054   38070 dev.go:95] Listening on address (HTTP + gRPC): [::1]:9399
+I0604 18:24:32.997507   38070 control.go:73] [/emulator/p6--oxela--firebase-root-service e644] UpdateResources(): done
+Schema: sources: schema/schema.gql [1167B] 
+Connector "default": sources: connector/mutations.gql [768B] connector/queries.gql [1014B] 
+I0604 18:24:43.253364   38070 engine.go:172] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql InsertProductOxelaWithImage: invalid request. 
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Le film des robots IA de l annee",
+   "displayPosition": 1,
+   "featured": false,
+   "handle": "billy",
+   "imageAltText": "z-unclassified",
+   "imageHeight": 90,
+   "imageUrl": "/assets/fallback-image-product.jpg",
+   "imageWidth": 96,
+   "productType": "z-unclassified",
+   "title": "billy"
+ }
+Errors: input: $imageHeight is not expected
+input: $imageAltText is not expected
+input: $displayPosition is not expected
+input: $imageWidth is not expected
+input: $featured is not expected
+input: $imageUrl is not expected
+
+sources: input [1784B] 
+I0604 18:25:26.229580   38070 prepare.go:117] [operation "InsertProductOxelaWithImage" attempt 1] preparePlan succeeded
+I0604 18:25:26.229686   38070 prepare.go:108] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:25:26.238673   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:25:26.238727   38070 every.go:44] @check granted after running 1 checks
+I0604 18:25:26.252024   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:25:26.252055   38070 every.go:44] @check granted after running 1 checks
+I0604 18:25:26.253169   38070 executor.go:97] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+W0604 18:25:26.253273   38070 engine.go:174] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql InsertProductOxelaWithImage: failed. 
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Le film des robots IA de l annee",
+   "handle": "billy",
+   "productType": "z-unclassified",
+   "title": "billy"
+ }
+Errors: input: cannot commit transaction: pq: unexpected transaction status idle
+
+Data:
+{
+   "product": {
+     "id": "e314a710b94b4ddfa726c548d98cd044"
+   }
+ }
+sources: input [1784B] 
+I0604 18:25:54.259334   38070 prepare.go:117] [operation "InsertProductOxelaWithImage" attempt 1] preparePlan succeeded
+I0604 18:25:54.259368   38070 prepare.go:108] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:25:54.262627   38070 deny_unless_true.go:37] authentication error (@check):  denied due to non-true result: false
+E0604 18:25:54.263041   38070 executor.go:116] failed to rollback transaction: pq: unexpected transaction status idle
+I0604 18:25:54.263294   38070 executor.go:97] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+W0604 18:25:54.263364   38070 engine.go:174] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql InsertProductOxelaWithImage: failed. 
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Le film des robots IA de l annee",
+   "handle": "billy",
+   "productType": "z-unclassified",
+   "title": "billy"
+ }
+Errors: input: query A product with this handle already exists (aborted)
+(rolled back)
+input: product (aborted)
+(aborted)
+
+Data:
+{
+   "product": null
+ }
+sources: input [1784B] 
+I0604 18:25:58.878521   38070 prepare.go:117] [operation "InsertProductOxelaWithImage" attempt 1] preparePlan succeeded
+I0604 18:25:58.878577   38070 prepare.go:108] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:25:58.881157   38070 deny_unless_true.go:37] authentication error (@check):  denied due to non-true result: false
+E0604 18:25:58.881251   38070 executor.go:116] failed to rollback transaction: pq: unexpected transaction status idle
+I0604 18:25:58.881267   38070 executor.go:97] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+W0604 18:25:58.881315   38070 engine.go:174] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql InsertProductOxelaWithImage: failed. 
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Le film des robots IA de l annee",
+   "handle": "billy",
+   "productType": "z-unclassified",
+   "title": "billy"
+ }
+Errors: input: query A product with this handle already exists (aborted)
+(rolled back)
+input: product (aborted)
+(aborted)
+
+Data:
+{
+   "product": null
+ }
+sources: input [1784B] 
+I0604 18:26:14.277061   38070 prepare.go:117] [operation "InsertProductOxelaWithImage" attempt 1] preparePlan succeeded
+I0604 18:26:14.277088   38070 prepare.go:108] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:26:14.278600   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:26:14.278627   38070 every.go:44] @check granted after running 1 checks
+I0604 18:26:14.279955   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:26:14.279978   38070 every.go:44] @check granted after running 1 checks
+I0604 18:26:14.280030   38070 executor.go:97] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+W0604 18:26:14.280118   38070 engine.go:174] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql InsertProductOxelaWithImage: failed. 
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Le film des robots IA de l annee",
+   "handle": "billay",
+   "productType": "z-unclassified",
+   "title": "billay"
+ }
+Errors: input: cannot commit transaction: pq: unexpected transaction status idle
+
+Data:
+{
+   "product": {
+     "id": "b4ab7b3ac84e4b73bdd210ac6c786180"
+   }
+ }
+sources: input [1784B] 
+I0604 18:26:45.487211   38070 engine.go:172] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql getfeaturedImagesOxela: invalid request. 
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Le film des robots IA de l annee",
+   "handle": "billay",
+   "productType": "z-unclassified",
+   "title": "billay"
+ }
+Errors: input: $description is not expected
+input: $availableForSale is not expected
+input: $productType is not expected
+input: $handle is not expected
+input: $title is not expected
+
+sources: input [1784B] 
+I0604 18:26:50.421978   38070 prepare.go:117] [operation "getfeaturedImagesOxela" attempt 1] preparePlan succeeded
+I0604 18:26:50.422011   38070 prepare.go:108] [operation "getfeaturedImagesOxela" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:26:50.425801   38070 executor.go:97] [operation "getfeaturedImagesOxela" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:26:50.425850   38070 engine.go:170] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql getfeaturedImagesOxela: succeeded. 
+I0604 18:26:56.665467   38070 prepare.go:117] [operation "getProductsOxela" attempt 1] preparePlan succeeded
+I0604 18:26:56.665492   38070 prepare.go:108] [operation "getProductsOxela" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:26:56.669360   38070 executor.go:97] [operation "getProductsOxela" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:26:56.669405   38070 engine.go:170] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql getProductsOxela: succeeded. 
+I0604 18:27:40.303666   38070 prepare.go:117] [operation "InsertProductOxelaWithImage" attempt 1] preparePlan succeeded
+I0604 18:27:40.303698   38070 prepare.go:108] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:27:40.306121   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:27:40.306145   38070 every.go:44] @check granted after running 1 checks
+I0604 18:27:40.308082   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:27:40.308097   38070 every.go:44] @check granted after running 1 checks
+I0604 18:27:40.308181   38070 executor.go:97] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+W0604 18:27:40.308295   38070 engine.go:174] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql InsertProductOxelaWithImage: failed. 
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Le film des robots IA de l annee",
+   "handle": "jojo",
+   "productType": "z-unclassified",
+   "title": "jojo"
+ }
+Errors: input: cannot commit transaction: pq: unexpected transaction status idle
+
+Data:
+{
+   "product": {
+     "id": "f46032740f6145fab328ab7307bbe6b5"
+   }
+ }
+sources: input [1784B] 
+I0604 18:27:54.073131   38070 engine.go:172] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql getProductsOxela: invalid request. 
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Le film des robots IA de l annee",
+   "handle": "jojo",
+   "productType": "z-unclassified",
+   "title": "jojo"
+ }
+Errors: input: $title is not expected
+input: $description is not expected
+input: $availableForSale is not expected
+input: $productType is not expected
+input: $handle is not expected
+
+sources: input [1784B] 
+I0604 18:28:00.947936   38070 prepare.go:117] [operation "getProductsOxela" attempt 1] preparePlan succeeded
+I0604 18:28:00.947960   38070 prepare.go:108] [operation "getProductsOxela" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:28:00.949251   38070 executor.go:97] [operation "getProductsOxela" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:28:00.949278   38070 engine.go:170] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql getProductsOxela: succeeded. 
+I0604 18:29:49.825850   38070 engine.go:172] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql InsertProductOxelaWithImage: invalid request. 
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Le film des robots IA de l annee",
+   "displayPosition": 1,
+   "featured": false,
+   "handle": "billy",
+   "imageAltText": "z-unclassified",
+   "imageHeight": 90,
+   "imageUrl": "/assets/fallback-image-product.jpg",
+   "imageWidth": 96,
+   "productType": "z-unclassified",
+   "title": "billy"
+ }
+Errors: input: $displayPosition is not expected
+input: $imageAltText is not expected
+input: $imageHeight is not expected
+input: $imageWidth is not expected
+input: $imageUrl is not expected
+input: $featured is not expected
+
+sources: input [1784B] 
+I0604 18:30:10.292648   38070 load.go:37] Reloading schema and connectors...
+I0604 18:30:10.388420   38070 control.go:73] [/emulator/p6--oxela--firebase-root-service e644] UpdateResources(): done
+Connector "default": sources: connector/mutations.gql [1539B] connector/queries.gql [1014B] 
+I0604 18:30:10.416539   38070 codegen.go:82] [connector "default" javascriptSdk] Generating sources into "/Users/ax/1-IT--mac2025/VS/0--proj/7--Oxela-admin/dcgen/js/default-connector"
+I0604 18:30:10.425106   38070 collector.go:107] schema extensions wrote into "/Users/ax/1-IT--mac2025/VS/0--proj/7--Oxela-admin/dataconnect/.dataconnect/schema"
+Generated sources: main/relation.gql [14458B] prelude.gql [71531B] main/query.gql [3800B] main/mutation.gql [10225B] main/implicit.gql [794B] main/input.gql [25390B] 
+I0604 18:30:10.426027   38070 collector.go:107] connector "default" javascriptSdk wrote into "/Users/ax/1-IT--mac2025/VS/0--proj/7--Oxela-admin/dcgen/js/default-connector"
+Generated sources: package.json [854B] README.md [31158B] index.d.ts [6685B] esm/index.esm.js [2646B] react/index.d.ts [3051B] react/package.json [462B] react/esm/package.json [17B] react/index.cjs.js [2526B] react/esm/index.esm.js [2368B] react/README.md [36220B] esm/package.json [17B] index.cjs.js [3112B] 
+I0604 18:30:10.426628   38070 installsdk.go:49] Package @oxela/default-connector is already installed. Skipping installation
+I0604 18:30:10.426637   38070 load.go:115] Finished reloading
+I0604 18:30:34.667432   38070 prepare.go:117] [operation "InsertProductOxelaWithImage" attempt 1] preparePlan succeeded
+I0604 18:30:34.667479   38070 prepare.go:108] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:30:34.671971   38070 deny_unless_true.go:37] authentication error (@check):  denied due to non-true result: false
+E0604 18:30:34.672229   38070 executor.go:116] failed to rollback transaction: pq: unexpected transaction status idle
+I0604 18:30:34.672261   38070 executor.go:97] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+W0604 18:30:34.672604   38070 engine.go:174] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql InsertProductOxelaWithImage: failed. 
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Le film des robots IA de l annee",
+   "displayPosition": 1,
+   "featured": false,
+   "handle": "billy",
+   "imageAltText": "z-unclassified",
+   "imageHeight": 90,
+   "imageUrl": "/assets/fallback-image-product.jpg",
+   "imageWidth": 96,
+   "productType": "z-unclassified",
+   "title": "billy"
+ }
+Errors: input: query A product with this handle already exists (aborted)
+(rolled back)
+input: product (aborted)
+(aborted)
+input: productImage_insert (aborted)
+(aborted)
+
+Data:
+{
+   "product": null,
+   "productImage_insert": null
+ }
+sources: input [2555B] 
+I0604 18:31:00.683033   38070 prepare.go:117] [operation "InsertProductOxelaWithImage" attempt 1] preparePlan succeeded
+I0604 18:31:00.683071   38070 prepare.go:108] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:31:00.684972   38070 deny_unless_true.go:37] authentication error (@check):  denied due to non-true result: false
+E0604 18:31:00.685058   38070 executor.go:116] failed to rollback transaction: pq: unexpected transaction status idle
+I0604 18:31:00.685077   38070 executor.go:97] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+W0604 18:31:00.685158   38070 engine.go:174] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql InsertProductOxelaWithImage: failed. 
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Le film des robots IA de l annee",
+   "displayPosition": 1,
+   "featured": false,
+   "handle": "billy",
+   "imageAltText": "z-unclassified",
+   "imageHeight": 90,
+   "imageUrl": "/assets/fallback-image-product.jpg",
+   "imageWidth": 96,
+   "productType": "z-unclassified",
+   "title": "billy"
+ }
+Errors: input: query A product with this handle already exists (aborted)
+(rolled back)
+input: product (aborted)
+(aborted)
+input: productImage_insert (aborted)
+(aborted)
+
+Data:
+{
+   "product": null,
+   "productImage_insert": null
+ }
+sources: input [2555B] 
+I0604 18:31:17.075018   38070 prepare.go:117] [operation "InsertProductOxelaWithImage" attempt 1] preparePlan succeeded
+I0604 18:31:17.075047   38070 prepare.go:108] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:31:17.077283   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:31:17.077301   38070 every.go:44] @check granted after running 1 checks
+I0604 18:31:17.079101   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:31:17.079119   38070 every.go:44] @check granted after running 1 checks
+I0604 18:31:17.086438   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:31:17.086459   38070 every.go:44] @check granted after running 1 checks
+I0604 18:31:17.086529   38070 executor.go:97] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+W0604 18:31:17.086611   38070 engine.go:174] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql InsertProductOxelaWithImage: failed. 
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Le film des robots IA de l annee",
+   "displayPosition": 1,
+   "featured": false,
+   "handle": "billyMan3",
+   "imageAltText": "z-unclassified",
+   "imageHeight": 90,
+   "imageUrl": "/assets/fallback-image-product.jpg",
+   "imageWidth": 96,
+   "productType": "z-unclassified",
+   "title": "billyMan3"
+ }
+Errors: input: cannot commit transaction: pq: unexpected transaction status idle
+
+Data:
+{
+   "product": {
+     "id": "7c979f4f52a3421abefd2b29fabac7fe"
+   },
+   "productImage_insert": {
+     "id": "2a0d77534fd242a091b2bf3044e1ce0c"
+   }
+ }
+sources: input [2555B] 
+I0604 18:31:36.384964   38070 prepare.go:117] [operation "getfeaturedImagesOxela" attempt 1] preparePlan succeeded
+I0604 18:31:36.385001   38070 prepare.go:108] [operation "getfeaturedImagesOxela" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:31:36.386557   38070 executor.go:97] [operation "getfeaturedImagesOxela" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:31:36.386587   38070 engine.go:170] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql getfeaturedImagesOxela: succeeded. 
+I0604 18:32:07.573888   38070 prepare.go:117] [operation "getProductsOxela" attempt 1] preparePlan succeeded
+I0604 18:32:07.573916   38070 prepare.go:108] [operation "getProductsOxela" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:32:07.575452   38070 executor.go:97] [operation "getProductsOxela" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:32:07.575479   38070 engine.go:170] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql getProductsOxela: succeeded. 
+I0604 18:33:53.833187   38070 load.go:37] Reloading schema and connectors...
+I0604 18:33:53.931203   38070 control.go:73] [/emulator/p6--oxela--firebase-root-service e644] UpdateResources(): done
+Connector "default": sources: connector/mutations.gql [1531B] connector/queries.gql [1014B] 
+I0604 18:33:53.960532   38070 codegen.go:82] [connector "default" javascriptSdk] Generating sources into "/Users/ax/1-IT--mac2025/VS/0--proj/7--Oxela-admin/dcgen/js/default-connector"
+I0604 18:33:53.968520   38070 collector.go:107] schema extensions wrote into "/Users/ax/1-IT--mac2025/VS/0--proj/7--Oxela-admin/dataconnect/.dataconnect/schema"
+Generated sources: main/input.gql [25390B] main/relation.gql [14458B] main/query.gql [3800B] prelude.gql [71531B] main/mutation.gql [10225B] main/implicit.gql [794B] 
+I0604 18:33:53.969686   38070 collector.go:107] connector "default" javascriptSdk wrote into "/Users/ax/1-IT--mac2025/VS/0--proj/7--Oxela-admin/dcgen/js/default-connector"
+Generated sources: react/package.json [462B] react/esm/index.esm.js [2368B] esm/package.json [17B] package.json [854B] README.md [31337B] react/index.d.ts [3051B] react/index.cjs.js [2526B] react/README.md [36306B] index.d.ts [6724B] esm/index.esm.js [2646B] index.cjs.js [3112B] react/esm/package.json [17B] 
+I0604 18:33:53.970433   38070 installsdk.go:49] Package @oxela/default-connector is already installed. Skipping installation
+I0604 18:33:53.970442   38070 load.go:115] Finished reloading
+I0604 18:34:06.276803   38070 prepare.go:117] [operation "InsertProductOxelaWithImage" attempt 1] preparePlan succeeded
+I0604 18:34:06.276843   38070 prepare.go:108] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:34:06.281989   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:34:06.282016   38070 every.go:44] @check granted after running 1 checks
+I0604 18:34:06.284051   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:34:06.284071   38070 every.go:44] @check granted after running 1 checks
+I0604 18:34:06.285558   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:34:06.285575   38070 every.go:44] @check granted after running 1 checks
+I0604 18:34:06.289256   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:34:06.289274   38070 every.go:44] @check granted after running 1 checks
+I0604 18:34:06.289370   38070 executor.go:97] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+W0604 18:34:06.289471   38070 engine.go:174] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql InsertProductOxelaWithImage: failed. 
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Le film des turtle ninja en pizza style",
+   "displayPosition": 1,
+   "featured": false,
+   "handle": "turtle ninja",
+   "imageAltText": "z-unclassified",
+   "imageHeight": 90,
+   "imageUrl": "/assets/fallback-image-product.jpg",
+   "imageWidth": 96,
+   "productType": "z-unclassified",
+   "title": "turtle ninja"
+ }
+Errors: input: cannot commit transaction: pq: unexpected transaction status idle
+
+Data:
+{
+   "product": {
+     "id": "176c92fe6b1841bdbf8c40bf36bc97b1"
+   },
+   "productImage_insert": {
+     "id": "6b4c64505bf5401496d3883a102848d5"
+   },
+   "product_update": {
+     "id": "176c92fe6b1841bdbf8c40bf36bc97b1"
+   }
+ }
+sources: input [2547B] 
+I0604 18:34:26.864537   38070 engine.go:172] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql getfeaturedImagesOxela: invalid request. 
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Le film des turtle ninja en pizza style",
+   "displayPosition": 1,
+   "featured": false,
+   "handle": "turtle ninja",
+   "imageAltText": "z-unclassified",
+   "imageHeight": 90,
+   "imageUrl": "/assets/fallback-image-product.jpg",
+   "imageWidth": 96,
+   "productType": "z-unclassified",
+   "title": "turtle ninja"
+ }
+Errors: input: $imageAltText is not expected
+input: $imageUrl is not expected
+input: $handle is not expected
+input: $availableForSale is not expected
+input: $description is not expected
+input: $featured is not expected
+input: $displayPosition is not expected
+input: $title is not expected
+input: $imageWidth is not expected
+input: $imageHeight is not expected
+input: $productType is not expected
+
+sources: input [2547B] 
+I0604 18:34:31.810166   38070 prepare.go:117] [operation "getfeaturedImagesOxela" attempt 1] preparePlan succeeded
+I0604 18:34:31.810203   38070 prepare.go:108] [operation "getfeaturedImagesOxela" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:34:31.811818   38070 executor.go:97] [operation "getfeaturedImagesOxela" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:34:31.811853   38070 engine.go:170] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql getfeaturedImagesOxela: succeeded. 
+I0604 18:34:39.222257   38070 prepare.go:117] [operation "getProductsOxela" attempt 1] preparePlan succeeded
+I0604 18:34:39.222284   38070 prepare.go:108] [operation "getProductsOxela" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:34:39.224662   38070 executor.go:97] [operation "getProductsOxela" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:34:39.224711   38070 engine.go:170] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql getProductsOxela: succeeded. 
+I0604 18:36:32.284399   38070 prepare.go:117] [operation "InsertProductOxelaWithImage" attempt 1] preparePlan succeeded
+I0604 18:36:32.284488   38070 prepare.go:108] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:36:32.289251   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:36:32.289289   38070 every.go:44] @check granted after running 1 checks
+I0604 18:36:32.291772   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:36:32.291788   38070 every.go:44] @check granted after running 1 checks
+I0604 18:36:32.294519   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:36:32.294533   38070 every.go:44] @check granted after running 1 checks
+I0604 18:36:32.296175   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:36:32.296185   38070 every.go:44] @check granted after running 1 checks
+I0604 18:36:32.296294   38070 executor.go:97] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+W0604 18:36:32.296492   38070 engine.go:174] [/emulator/p6--oxela--firebase-root-service e644] ExecuteMutation InsertProductOxelaWithImage: failed. Connector: default
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "Sararah on y va",
+   "displayPosition": 1,
+   "featured": false,
+   "handle": "sararah",
+   "imageAltText": "z-unclassified",
+   "imageHeight": 90,
+   "imageUrl": "/assets/fallback-image-product.jpg",
+   "imageWidth": 96,
+   "productType": "z-unclassified",
+   "title": "Sararah"
+ }
+Errors: input: cannot commit transaction: pq: unexpected transaction status idle
+
+Data:
+{
+   "product": {
+     "id": "5ad32a6261ef4f7c8615ce4d25bf9169"
+   },
+   "productImage_insert": {
+     "id": "f4a1f09c807b4362a45ce2d08cf516b9"
+   },
+   "product_update": {
+     "id": "5ad32a6261ef4f7c8615ce4d25bf9169"
+   }
+ }
+sources: connector/queries.gql [1014B] connector/mutations.gql [1531B] 
+I0604 18:37:42.201031   38070 prepare.go:117] [operation "getProductsOxela" attempt 1] preparePlan succeeded
+I0604 18:37:42.201504   38070 prepare.go:108] [operation "getProductsOxela" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:37:42.207279   38070 executor.go:97] [operation "getProductsOxela" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:37:42.207326   38070 engine.go:170] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql getProductsOxela: succeeded. 
+I0604 18:37:56.105730   38070 prepare.go:117] [operation "getProductsOxela" attempt 1] preparePlan succeeded
+I0604 18:37:56.105762   38070 prepare.go:108] [operation "getProductsOxela" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:37:56.107029   38070 executor.go:97] [operation "getProductsOxela" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:37:56.107057   38070 engine.go:170] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql getProductsOxela: succeeded. 
+I0604 18:38:10.300826   38070 prepare.go:117] [operation "getfeaturedImagesOxela" attempt 1] preparePlan succeeded
+I0604 18:38:10.300859   38070 prepare.go:108] [operation "getfeaturedImagesOxela" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:38:10.306100   38070 executor.go:97] [operation "getfeaturedImagesOxela" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:38:10.306139   38070 engine.go:170] [/emulator/p6--oxela--firebase-root-service e644] ExecuteGraphql getfeaturedImagesOxela: succeeded. 
+I0604 18:45:47.669831   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:45:47.670446   38070 every.go:44] @check granted after running 1 checks
+I0604 18:45:47.675904   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:45:47.675929   38070 every.go:44] @check granted after running 1 checks
+I0604 18:45:47.679590   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:45:47.679608   38070 every.go:44] @check granted after running 1 checks
+I0604 18:45:47.682408   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:45:47.682422   38070 every.go:44] @check granted after running 1 checks
+I0604 18:45:47.684491   38070 executor.go:97] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+W0604 18:45:47.685540   38070 engine.go:174] [/emulator/p6--oxela--firebase-root-service e644] ExecuteMutation InsertProductOxelaWithImage: failed. Connector: default
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "torotototorotototorotototorotototorotototorotototorototo",
+   "displayPosition": 1,
+   "featured": false,
+   "handle": "praticator2",
+   "imageAltText": "z-unclassified",
+   "imageHeight": 90,
+   "imageUrl": "/assets/fallback-image-product.jpg",
+   "imageWidth": 96,
+   "productType": "z-unclassified",
+   "title": "praticator2"
+ }
+Errors: input: cannot commit transaction: pq: unexpected transaction status idle
+
+Data:
+{
+   "product": {
+     "id": "e796bd6ae14049239f4103a1a61e4274"
+   },
+   "productImage_insert": {
+     "id": "303acbcf3ece40edb2ce09ab18b04a3c"
+   },
+   "product_update": {
+     "id": "e796bd6ae14049239f4103a1a61e4274"
+   }
+ }
+sources: connector/mutations.gql [1531B] connector/queries.gql [1014B] 
+I0604 18:46:29.268530   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:46:29.268556   38070 every.go:44] @check granted after running 1 checks
+I0604 18:46:29.270981   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:46:29.271002   38070 every.go:44] @check granted after running 1 checks
+I0604 18:46:29.274542   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:46:29.274559   38070 every.go:44] @check granted after running 1 checks
+I0604 18:46:29.277073   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 18:46:29.277091   38070 every.go:44] @check granted after running 1 checks
+I0604 18:46:29.277173   38070 executor.go:97] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+W0604 18:46:29.277276   38070 engine.go:174] [/emulator/p6--oxela--firebase-root-service e644] ExecuteMutation InsertProductOxelaWithImage: failed. Connector: default
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "torotototorotototorotototorotototorotototorotototorototo",
+   "displayPosition": 1,
+   "featured": false,
+   "handle": "praticator5",
+   "imageAltText": "z-unclassified",
+   "imageHeight": 90,
+   "imageUrl": "/assets/fallback-image-product.jpg",
+   "imageWidth": 96,
+   "productType": "z-unclassified",
+   "title": "praticator5"
+ }
+Errors: input: cannot commit transaction: pq: unexpected transaction status idle
+
+Data:
+{
+   "product": {
+     "id": "e97dbed6cbe249acbfda6954d54fc1d5"
+   },
+   "productImage_insert": {
+     "id": "66d450312ca8428e8d3be61bf3896f33"
+   },
+   "product_update": {
+     "id": "e97dbed6cbe249acbfda6954d54fc1d5"
+   }
+ }
+sources: connector/queries.gql [1014B] connector/mutations.gql [1531B] 
+I0604 18:46:43.019589   38070 prepare.go:117] [operation "getProductsOxela" attempt 1] preparePlan succeeded
+I0604 18:46:43.024474   38070 prepare.go:108] [operation "getProductsOxela" attempt 1] DBStats beforePrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterPrepare: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:46:43.033467   38070 executor.go:97] [operation "getProductsOxela" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 18:46:43.033684   38070 engine.go:170] [/emulator/p6--oxela--firebase-root-service e644] ExecuteQuery getProductsOxela: succeeded. Connector: default
+I0604 19:00:47.453094   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 19:00:47.454519   38070 every.go:44] @check granted after running 1 checks
+I0604 19:00:47.465364   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 19:00:47.465386   38070 every.go:44] @check granted after running 1 checks
+I0604 19:00:47.468179   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 19:00:47.468189   38070 every.go:44] @check granted after running 1 checks
+I0604 19:00:47.472410   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 19:00:47.472419   38070 every.go:44] @check granted after running 1 checks
+I0604 19:00:47.473456   38070 executor.go:97] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+W0604 19:00:47.475374   38070 engine.go:174] [/emulator/p6--oxela--firebase-root-service e644] ExecuteMutation InsertProductOxelaWithImage: failed. Connector: default
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "super combo man",
+   "displayPosition": 1,
+   "featured": false,
+   "handle": "termo-plop-6",
+   "imageAltText": "z-unclassified",
+   "imageHeight": 90,
+   "imageUrl": "/assets/fallback-image-product.jpg",
+   "imageWidth": 96,
+   "productType": "z-unclassified",
+   "title": "termo plop 6"
+ }
+Errors: input: cannot commit transaction: pq: unexpected transaction status idle
+
+Data:
+{
+   "product": {
+     "id": "45b396221d5d4966aa26997247f90f1f"
+   },
+   "productImage_insert": {
+     "id": "4c42b895f2594d7a91435e0147f4a10f"
+   },
+   "product_update": {
+     "id": "45b396221d5d4966aa26997247f90f1f"
+   }
+ }
+sources: connector/mutations.gql [1531B] connector/queries.gql [1014B] 
+I0604 19:19:48.323570   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 19:19:48.324817   38070 every.go:44] @check granted after running 1 checks
+I0604 19:19:48.334316   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 19:19:48.334347   38070 every.go:44] @check granted after running 1 checks
+I0604 19:19:48.339578   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 19:19:48.339599   38070 every.go:44] @check granted after running 1 checks
+I0604 19:19:48.346476   38070 deny_unless_true.go:40] authentication error (@check):  granted with true result: true
+I0604 19:19:48.346525   38070 every.go:44] @check granted after running 1 checks
+I0604 19:19:48.346908   38070 executor.go:97] [operation "InsertProductOxelaWithImage" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+W0604 19:19:48.347710   38070 engine.go:174] [/emulator/p6--oxela--firebase-root-service e644] ExecuteMutation InsertProductOxelaWithImage: failed. Connector: default
+Auth: public
+Variables:
+{
+   "availableForSale": true,
+   "description": "lpopopopop",
+   "displayPosition": 1,
+   "featured": false,
+   "handle": "admin/admin/",
+   "imageAltText": "z-unclassified",
+   "imageHeight": 90,
+   "imageUrl": "/assets/fallback-image-product.jpg",
+   "imageWidth": 96,
+   "productType": "z-unclassified",
+   "title": "admin/admin/"
+ }
+Errors: input: cannot commit transaction: pq: unexpected transaction status idle
+
+Data:
+{
+   "product": {
+     "id": "aa1a8102588544278817d646ef68206a"
+   },
+   "productImage_insert": {
+     "id": "538e160ad94f4830950815c4ed9dac94"
+   },
+   "product_update": {
+     "id": "aa1a8102588544278817d646ef68206a"
+   }
+ }
+sources: connector/queries.gql [1014B] connector/mutations.gql [1531B] 
+I0604 19:19:48.493294   38070 executor.go:97] [operation "getProductsOxela" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:0, InUse:0, Idle:0, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 19:19:48.493362   38070 engine.go:170] [/emulator/p6--oxela--firebase-root-service e644] ExecuteQuery getProductsOxela: succeeded. Connector: default
+I0604 19:22:47.439049   38070 executor.go:97] [operation "getProductsOxela" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 19:22:47.439324   38070 engine.go:170] [/emulator/p6--oxela--firebase-root-service e644] ExecuteQuery getProductsOxela: succeeded. Connector: default
+I0604 19:23:51.529394   38070 executor.go:97] [operation "getProductsOxela" attempt 1] DBStats beforeRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}, afterRun: sql.DBStats{MaxOpenConnections:1, OpenConnections:1, InUse:0, Idle:1, WaitCount:0, WaitDuration:0, MaxIdleClosed:0, MaxIdleTimeClosed:0, MaxLifetimeClosed:0}
+I0604 19:23:51.529536   38070 engine.go:170] [/emulator/p6--oxela--firebase-root-service e644] ExecuteQuery getProductsOxela: succeeded. Connector: default

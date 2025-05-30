@@ -10,6 +10,10 @@ import { CATEGORY_OPTIONS } from './options';
 
 export const columns: ColumnDef<Product>[] = [
   {
+    id: 'actions',
+    cell: ({ row }) => <CellAction data={row.original} />
+  },
+  {
     accessorKey: 'photo_url',
     header: 'IMAGE',
     cell: ({ row }) => {
@@ -21,6 +25,11 @@ export const columns: ColumnDef<Product>[] = [
             fill
             className='rounded-lg'
           />
+          {/* <img
+            src={row.getValue('photo_url')}
+            alt={row.getValue('name')}
+            className='rounded-lg'
+          /> */}
         </div>
       );
     }
@@ -34,7 +43,7 @@ export const columns: ColumnDef<Product>[] = [
     cell: ({ cell }) => <div>{cell.getValue<Product['name']>()}</div>,
     meta: {
       label: 'Name',
-      placeholder: 'Search products...',
+      placeholder: 'Rechercher des produits...',
       variant: 'text',
       icon: Text
     },
@@ -68,13 +77,12 @@ export const columns: ColumnDef<Product>[] = [
     accessorKey: 'price',
     header: 'PRICE'
   },
+  // {
+  //   accessorKey: 'description',
+  //   header: 'DESCRIPTION'
+  // }
   {
-    accessorKey: 'description',
-    header: 'DESCRIPTION'
-  },
-
-  {
-    id: 'actions',
-    cell: ({ row }) => <CellAction data={row.original} />
+    accessorKey: 'id',
+    header: 'ID'
   }
 ];

@@ -9,7 +9,9 @@ const baseConfig: NextConfig = {
         protocol: 'https',
         hostname: 'api.slingacademy.com',
         port: ''
-      }
+      },
+      { hostname: 'firebasestorage.googleapis.com' },
+      { hostname: 'rstr.in' }
     ]
   },
   transpilePackages: ['geist']

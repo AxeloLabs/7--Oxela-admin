@@ -46,3 +46,10 @@ next-env.d.ts
 
 # Sentry Config File
 .env.sentry-build-plugin
+
+# Axel
+.firebase/logs/
+dataconnect/.dataconnect/
+!.env.local.example
+dataconnect-generated/
+dcgen/

@@ -1,12 +1,18 @@
-import { auth } from '@clerk/nextjs/server';
+import { cookies } from 'next/headers';
+// import Authentication from './auth/firebase/authentication';
 import { redirect } from 'next/navigation';
+// TODO:
+// import './auth.css';
 
-export default async function Page() {
-  const { userId } = await auth();
+export default async function AuthPage() {
+  const cookieStore = await cookies();
+  const session = cookieStore.get('__session')?.value;
 
-  if (!userId) {
-    return redirect('/auth/sign-in');
-  } else {
-    redirect('/dashboard/overview');
+  if (session) {
+    // TODO:
+    return redirect('/dashboard/overview');
+    // return redirect('/orders')
   }
+  return redirect('/auth/sign-in');
+  // return <Authentication />;
 }

@@ -1,5 +1,8 @@
 'use client';
+import { useAuth } from '@/hooks/firebase/useAuth';
 import { Button } from '@/components/ui/button';
+import { auth } from '@/lib/firebase';
+import { signOut } from 'firebase/auth';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,12 +13,25 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
 import { UserAvatarProfile } from '@/components/user-avatar-profile';
-import { SignOutButton, useUser } from '@clerk/nextjs';
+// import { SignOutButton, useUser } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
+
 export function UserNav() {
-  const { user } = useUser();
+  const { push } = useRouter();
+  // const { user } = useUser();
+  const { user: fbUser } = useAuth();
+  const isSignedIn = !!fbUser?.uid;
+
+  // adapter from clerk-auth to firebase-auth
+  const user = {
+    ...fbUser,
+    emailAddresses: [{ emailAddress: fbUser?.email ?? '' }],
+    fullName: fbUser?.displayName
+  };
+
   const router = useRouter();
-  if (user) {
+  // if (user) {
+  if (isSignedIn) {
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
@@ -50,7 +66,17 @@ export function UserNav() {
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
           <DropdownMenuItem>
-            <SignOutButton redirectUrl='/auth/sign-in' />
+            {/* clerk */}
+            {/* <SignOutButton redirectUrl='/auth/sign-in' /> */}
+            <button
+              onClick={() => {
+                signOut(auth);
+                push('/auth/firebase');
+              }}
+              className='flex w-full items-center rounded-full px-4 py-2 font-medium transition-colors hover:bg-gray-200'
+            >
+              Sign out
+            </button>
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

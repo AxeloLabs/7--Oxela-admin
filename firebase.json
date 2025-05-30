@@ -1,0 +1,29 @@
+{
+  "dataconnect": {
+    "source": "dataconnect"
+  },
+  "apphosting": [
+    {
+      "backendId": "p7-oxela-admin-firebase",
+      "rootDir": "/",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "functions"
+      ]
+    }
+  ],
+  "emulators": {
+    "dataconnect": {
+      "dataDir": "dataconnect/.dataconnect/pgliteData",
+      "port": 9399
+    },
+    "ui": {
+      "enabled": true,
+      "port": 0
+    },
+    "singleProjectMode": true
+  }
+}

@@ -13,10 +13,10 @@
 
 ## 🚀 Déploiements en production
 
-| Application          | Lien                                                                                                                 |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| 🌐 Vitrine Ecommerce | [oxela.web](https://p6-oxela-firebase-webapp--p6--oxela--firebase-root.us-central1.hosted.app/en)                    |
-| 🛠️ Admin CMS         | [oxela.admin](https://p7-oxela-admin-apphosting--p6--oxela--firebase-root.us-central1.hosted.app/dashboard/overview) |
+| Application          | Lien                                                                                                                  |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| 🌐 Vitrine Ecommerce | [oxela.web](https://p6-oxela-firebase-webapp--p6--oxela--firebase-root.us-central1.hosted.app/en)                     |
+| 🛠️ Admin CMS         | [oxela.admin](https://p7-oxela-admin-apphosting--p6--oxela--firebase-root.us-central1.hosted.app/dashboard/dashboard) |
 
 <br/>
 

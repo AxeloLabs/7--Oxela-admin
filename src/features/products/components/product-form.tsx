@@ -32,11 +32,11 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { dc } from '@/lib/firebase/data-connect';
-import { insertProductOxelaWithImage } from '@oxela/default-connector';
-// import { upsertProduct } from '@oxela/default-connector';
-// import { product_insert, product_upsert } from '@oxela/default-connector';
-// import { updateProductOxela } from '@oxela/default-connector';
-// import { insertProductOxela } from '@oxela/default-connector';
+import { insertProductOxelaWithImage } from '@firebasegen/default-connector';
+// import { upsertProduct } from '@firebasegen/default-connector';
+// import { product_insert, product_upsert } from '@firebasegen/default-connector';
+// import { updateProductOxela } from '@firebasegen/default-connector';
+// import { insertProductOxela } from '@firebasegen/default-connector';
 
 type ProductDtoIn = {
   //  # product
@@ -130,6 +130,14 @@ async function getImage(values: z.infer<typeof formSchema>) {
   return image;
 }
 
+// TODO: cath error
+// try {
+//   const res = await product_query({});
+//   return res;
+// } catch (e) {
+//   console.error("🔥 ERREUR DataConnect:", e);
+//   return null;
+// }
 export default function ProductForm({
   initialData,
   pageTitle
@@ -205,7 +213,7 @@ export default function ProductForm({
 
     // ___________________________________________
     //
-    // -- ADD mode --
+    // 1 -- ADD mode --
     // ___________________________________________
     if (initialData === null) {
       try {
@@ -226,7 +234,7 @@ export default function ProductForm({
     }
     // ___________________________________________
     //
-    // -- EDIT mode --
+    // 2 -- EDIT mode --
     // ___________________________________________
     else {
       // EDIT

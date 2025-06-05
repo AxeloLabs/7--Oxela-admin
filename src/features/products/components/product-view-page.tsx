@@ -1,7 +1,7 @@
 // import { fakeProducts, Product } from '@/constants/mock-api';
 import { notFound } from 'next/navigation';
 import ProductForm from './product-form';
-import { getProductByIdOxela } from '@oxela/default-connector';
+import { getProductByIdOxela } from '@firebasegen/default-connector';
 import { Product } from '@/constants/mock-api';
 
 // TODO: manque les champs ALT de image

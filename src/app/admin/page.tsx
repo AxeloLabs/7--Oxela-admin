@@ -11,7 +11,7 @@ export default async function Admin() {
   // if (!isLoggedIn) {
   //   return redirect('/auth/sign-in');
   // } else {
-  //   redirect('/admin/overview');
+  //   redirect('/admin/dashboard');
   // }
 
   // firebase v2 :
@@ -19,7 +19,7 @@ export default async function Admin() {
   const session = cookieStore.get('__session')?.value;
 
   if (session) {
-    return redirect('/admin/overview');
+    return redirect('/admin/dashboard');
   }
   return redirect('/auth/sign-in');
 
@@ -29,6 +29,6 @@ export default async function Admin() {
   // if (!userId) {
   //   return redirect('/auth/sign-in');
   // } else {
-  //   redirect('/admin/overview');
+  //   redirect('/admin/dashboard');
   // }
 }

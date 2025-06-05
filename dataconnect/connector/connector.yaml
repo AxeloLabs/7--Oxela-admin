@@ -1,7 +1,7 @@
 connectorId: default
 generate:
   javascriptSdk:
-    outputDir: ../../dcgen/js/default-connector
-    package: '@oxela/default-connector'
+    outputDir: ../../dataconnect-generated/js/default-connector
+    package: "@firebasegen/default-connector"
     packageJsonDir: ../..
     react: true

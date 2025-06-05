@@ -4,7 +4,7 @@
 import { dc } from '@/lib/firebase/data-connect';
 import { ProductTable } from './product-tables';
 import { columns } from './product-tables/columns';
-import { getProductsOxela } from '@oxela/default-connector';
+import { getProductsOxela } from '@firebasegen/default-connector';
 
 type ProductListingPage = {};
 
@@ -45,10 +45,27 @@ function uuidToNumber(uuid: string): number {
 // const data = await fakeProducts.getProducts(filters);
 // const totalProducts = data.total_products;
 // const products: Product[] = data.products;
+
+// TODO: cath error, fonction fetchData()
+async function fetchData() {
+  try {
+    // const res = await product_query({});
+    const res = await getProductsOxela(dc);
+    return res;
+  } catch (e) {
+    console.error('🔥 ERREUR DataConnect:', e);
+    return null;
+  }
+}
 export default async function ProductListingPage({}: ProductListingPage) {
-  const productsQuery = await getProductsOxela(dc);
-  if (!productsQuery.data?.products) {
-    throw new Error('Aucun produit retourné');
+  // const productsQuery = await getProductsOxela(dc);
+  const productsQuery = await fetchData();
+  // if (!productsQuery.data?.products) {
+  if (!productsQuery) {
+    // throw new Error('Aucun produit retourné');
+    console.error('⚠️ Aucun produit retourné: [throw new Error]');
+
+    return <ProductTable data={[]} totalItems={0} columns={columns} />;
   }
   // TODO: il y a un couplage de dependance entre les DATA-TABLE et ce DTO, qui est different des ENTITES
   const productsTable: ProductTableDto[] = productsQuery.data.products.map(

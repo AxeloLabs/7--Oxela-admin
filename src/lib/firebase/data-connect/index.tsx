@@ -1,4 +1,4 @@
-import { connectorConfig } from '@oxela/default-connector';
+import { connectorConfig } from '@firebasegen/default-connector';
 import { initializeApp, getApps } from 'firebase/app';
 import {
   getDataConnect,
@@ -20,6 +20,8 @@ const firebase_app =
 const dc = getDataConnect(firebase_app, connectorConfig);
 
 // env. TEST (TODO: comment for production env.)
-connectDataConnectEmulator(dc, '127.0.0.1', 9399);
+// if (process.env.USE_EMULATOR === 'true') {
+// connectDataConnectEmulator(dc, '127.0.0.1', 9399);
+// }
 
 export { dc };

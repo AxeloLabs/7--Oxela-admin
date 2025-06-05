@@ -15,7 +15,7 @@ import { SearchParams } from 'nuqs/server';
 import { Suspense } from 'react';
 
 export const metadata = {
-  title: 'Tableau de Bord: Logiciel'
+  title: 'Oxela-admin: Acceuil'
 };
 
 type pageProps = {

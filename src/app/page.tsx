@@ -10,9 +10,11 @@ export default async function AuthPage() {
 
   if (session) {
     // TODO:
-    return redirect('/admin/overview');
+    return redirect('/admin/dashboard');
     // return redirect('/orders')
   }
-  return redirect('/auth/sign-in');
+  // TODO: for production (uncomment below line)
+  // return redirect('/auth/sign-in');
+  return redirect('/admin/dashboard');
   // return <Authentication />;
 }

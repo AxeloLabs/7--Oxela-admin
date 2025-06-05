@@ -11,7 +11,7 @@ import { auth } from '@/lib/firebase';
 import Button from '@/components/ui-firebase/button';
 import Input from '@/components/ui-firebase/input';
 import { FirebaseError } from 'firebase/app'; // mock
-// import { upsertCustomer } from '@oxela/default-connector';
+// import { upsertCustomer } from '@firebasegen/default-connector';
 import { dc } from '@/lib/firebase/data-connect';
 import { setCookie } from 'cookies-next';
 import { getAuthErrorMessage } from '@/lib/firebase/getAuthErrorMessages';

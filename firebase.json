@@ -5,7 +5,6 @@
   "apphosting": [
     {
       "backendId": "p7-oxela-admin-firebase",
-      "rootDir": "/",
       "ignore": [
         "node_modules",
         ".git",

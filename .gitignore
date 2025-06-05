@@ -48,8 +48,11 @@ next-env.d.ts
 .env.sentry-build-plugin
 
 # Axel
-.firebase/logs/
-dataconnect/.dataconnect/
+!.env.production
 !.env.local.example
-dataconnect-generated/
-dcgen/
+.firebase/logs/
+.firebase/logs/vsce-debug.log
+.firebase/.graphqlrc
+dataconnect-debug.log
+firebase-debug.log
+dataconnect/.dataconnect/
